@@ -97,6 +97,7 @@ class _OneLastStepState extends State<OneLastStep> {
                     Get.toNamed(AppRoutes.signUp);
                   },
                   child: const Button(
+                    colors: primary,
                     button_text: 'Continue',
                   ),
                 ),
@@ -108,4 +109,3 @@ class _OneLastStepState extends State<OneLastStep> {
     );
   }
 }
-

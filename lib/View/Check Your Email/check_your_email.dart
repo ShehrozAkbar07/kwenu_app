@@ -42,7 +42,7 @@ class _CheckYourEmailState extends State<CheckYourEmail> {
                 Text(
                   "Please Check Your\nEmail",
                   style: TextStyle(
-                    wordSpacing: 2.9,
+                      wordSpacing: 2.9,
                       height: 1.4,
                       fontSize: 25.sp,
                       color: black,
@@ -98,7 +98,8 @@ class _CheckYourEmailState extends State<CheckYourEmail> {
                   onTap: () {
                     Get.toNamed(AppRoutes.signUp);
                   },
-                  child: const Button(
+                  child: Button(
+                    colors: primary,
                     button_text: 'Open Email App',
                   ),
                 ),

@@ -209,6 +209,7 @@ class _SignUpState extends State<SignUp> {
                   height: 20.h,
                 ),
                 const Button(
+                  colors: primary,
                   button_text: 'Sign Up',
                 ),
               ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kwenu_app/Const/color.dart';
 import 'package:kwenu_app/Const/const.dart';
 import 'package:kwenu_app/View/Dashboard/debit_card_container.dart';
 import 'package:kwenu_app/Widgets/app_bar.dart';
@@ -47,7 +48,7 @@ class _ConnectCardState extends State<ConnectCard> {
               SizedBox(
                 height: 30.h,
               ),
-              Button(button_text: 'Add New Card')
+              Button(colors: primary, button_text: 'Add New Card')
             ],
           ),
         ),

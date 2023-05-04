@@ -180,6 +180,7 @@ class _LoginState extends State<Login> {
                     Get.toNamed(AppRoutes.signUp);
                   },
                   child: const Button(
+                    colors: primary,
                     button_text: 'Sign In',
                   ),
                 ),

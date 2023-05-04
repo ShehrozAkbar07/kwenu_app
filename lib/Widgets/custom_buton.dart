@@ -5,7 +5,8 @@ import '../Const/color.dart';
 
 class Button extends StatefulWidget {
   final String button_text;
-  const Button({super.key, required this.button_text});
+  final Color colors;
+  const Button({super.key, required this.button_text, required this.colors});
 
   @override
   State<Button> createState() => _ButtonState();
@@ -18,7 +19,7 @@ class _ButtonState extends State<Button> {
       height: 60.h,
       width: double.infinity,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: primary),
+          borderRadius: BorderRadius.circular(10), color: widget.colors),
       child: Center(
         child: Text(
           widget.button_text,
