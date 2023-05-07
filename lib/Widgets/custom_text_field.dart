@@ -8,6 +8,7 @@ class CustomTextFieldd extends StatelessWidget {
   final int? maxlines;
   final bool? ab;
   final Widget? prefix;
+  final Widget? suffix;
 
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
@@ -20,7 +21,8 @@ class CustomTextFieldd extends StatelessWidget {
       this.keyboardType,
       this.prefixIcon,
       required this.ab,
-      this.prefix})
+      this.prefix,
+      this.suffix})
       : super(key: key);
 
   @override
@@ -36,7 +38,8 @@ class CustomTextFieldd extends StatelessWidget {
         AutofillHints.telephoneNumber
       ],
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(vertical: 14, horizontal: 10),
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 14, horizontal: 10),
         // fillColor:  Color(AppColors.fillColor),
         filled: true,
 
@@ -45,6 +48,7 @@ class CustomTextFieldd extends StatelessWidget {
           padding: EdgeInsets.only(right: 5.w),
           child: prefix,
         ),
+        suffix: suffix,
 
         // maxLines: maxlines,
 

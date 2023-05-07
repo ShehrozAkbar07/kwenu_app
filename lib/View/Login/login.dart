@@ -38,6 +38,7 @@ class _LoginState extends State<Login> {
               children: [
                 Appbarr(
                   text: 'Sign in',
+                  iconCross: false,
                 ),
                 SizedBox(
                   height: 20.h,

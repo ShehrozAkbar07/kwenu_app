@@ -35,6 +35,7 @@ class _CheckYourEmailState extends State<CheckYourEmail> {
               children: [
                 Appbarr(
                   text: 'Sign Up',
+                  iconCross: false,
                 ),
                 SizedBox(
                   height: 20.h,
@@ -96,7 +97,7 @@ class _CheckYourEmailState extends State<CheckYourEmail> {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.toNamed(AppRoutes.signUp);
+                    Get.toNamed(AppRoutes.oneLastStep);
                   },
                   child: Button(
                     colors: primary,

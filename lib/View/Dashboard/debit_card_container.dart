@@ -27,7 +27,7 @@ class _DebitCardState extends State<DebitCard> {
   Widget build(BuildContext context) {
     return Container(
       height: 200.h,
-      width: 320.w,
+      width: 330.w,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(13),
           image: DecorationImage(

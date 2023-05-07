@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:kwenu_app/Const/const.dart';
 import 'package:kwenu_app/View/Dashboard/categories.dart';
 import 'package:kwenu_app/View/Dashboard/debit_card_container.dart';
 
+import '../../AppRoutes/routes.dart';
 import '../../Const/color.dart';
 import 'dashboard_appbar.dart';
 
@@ -72,11 +75,16 @@ class _DashboardState extends State<Dashboard> {
                               SizedBox(
                                 width: 15.w,
                               ),
-                              const DebitCard(
-                                  Balance: "₦‎5,750.20",
-                                  cardNumber: "5282 **** **** 6372",
-                                  expDate: "09/25",
-                                  cardImage: "assets/images/blue.png"),
+                              InkWell(
+                                onTap: () {
+                                  Get.toNamed(AppRoutes.connectCard);
+                                },
+                                child: const DebitCard(
+                                    Balance: "₦‎5,750.20",
+                                    cardNumber: "5282 **** **** 6372",
+                                    expDate: "09/25",
+                                    cardImage: "assets/images/blue.png"),
+                              ),
                               SizedBox(
                                 width: 15.w,
                               ),

@@ -38,6 +38,7 @@ class _OneLastStepState extends State<OneLastStep> {
               children: [
                 Appbarr(
                   text: 'Sign Up',
+                  iconCross: false,
                 ),
                 SizedBox(
                   height: 20.h,
@@ -94,7 +95,7 @@ class _OneLastStepState extends State<OneLastStep> {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.toNamed(AppRoutes.signUp);
+                    Get.toNamed(AppRoutes.dashboard);
                   },
                   child: const Button(
                     colors: primary,

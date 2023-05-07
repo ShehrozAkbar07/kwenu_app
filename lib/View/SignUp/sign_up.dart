@@ -208,9 +208,14 @@ class _SignUpState extends State<SignUp> {
                 SizedBox(
                   height: 20.h,
                 ),
-                const Button(
-                  colors: primary,
-                  button_text: 'Sign Up',
+                InkWell(
+                  onTap: () {
+                    Get.toNamed(AppRoutes.checkYourEmail);
+                  },
+                  child: const Button(
+                    colors: primary,
+                    button_text: 'Sign Up',
+                  ),
                 ),
               ],
             ),

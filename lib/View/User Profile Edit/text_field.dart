@@ -8,7 +8,8 @@ import 'package:kwenu_app/Const/color.dart';
 
 class field extends StatefulWidget {
   final Widget? prefixIcon;
-  field({this.prefixIcon});
+  final String labelText;
+  field({this.prefixIcon, required this.labelText});
 
   @override
   State<field> createState() => _fieldState();
@@ -20,7 +21,7 @@ class _fieldState extends State<field> {
     return TextField(
       decoration: InputDecoration(
         prefixIcon: widget.prefixIcon,
-        labelText: "First Name",
+        labelText: widget.labelText,
         labelStyle: const TextStyle(
           fontWeight: FontWeight.w400,
           color: grey,

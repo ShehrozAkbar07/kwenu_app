@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:kwenu_app/Const/const.dart';
 import 'package:kwenu_app/View/User%20Profile/user_profile_a%5B%5Bbar.dart';
 import 'package:kwenu_app/Widgets/app_bar.dart';
 
+import '../../AppRoutes/routes.dart';
 import '../../Const/color.dart';
 import '../../Widgets/custom_circle_image.dart';
 
@@ -53,7 +56,12 @@ class _UserProfileState extends State<UserProfile> {
               SizedBox(
                 height: 30.h,
               ),
-              ProfileOptions('assets/images/up1.png', 'Edit Profile', false),
+              InkWell(
+                  onTap: () {
+                    Get.toNamed(AppRoutes.userProfileEdit);
+                  },
+                  child: ProfileOptions(
+                      'assets/images/up1.png', 'Edit Profile', false)),
               Divider(
                 color: grey,
               ),

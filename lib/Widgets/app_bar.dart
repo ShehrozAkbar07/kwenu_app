@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
+import '../AppRoutes/routes.dart';
 import '../Const/color.dart';
 
 class Appbarr extends StatefulWidget {
@@ -37,9 +40,14 @@ class _AppbarrState extends State<Appbarr> {
                 child: Center(
                   child: Padding(
                     padding: EdgeInsets.only(left: 4.w),
-                    child: Icon(
-                      widget.iconCross! ? Icons.close : Icons.arrow_back_ios,
-                      size: 25,
+                    child: InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Icon(
+                        widget.iconCross! ? Icons.close : Icons.arrow_back_ios,
+                        size: 25,
+                      ),
                     ),
                   ),
                 ),

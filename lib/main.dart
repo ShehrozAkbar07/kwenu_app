@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             smartManagement: SmartManagement.full,
             debugShowCheckedModeBanner: false,
             getPages: AppRoutes.appRoutes,
-            initialRoute: AppRoutes.userProfileEdit,
+            initialRoute: AppRoutes.splash,
             theme: ThemeData(
               colorScheme: ColorScheme.fromSwatch()
                   .copyWith(primary: primary, onPrimary: whiteColor),

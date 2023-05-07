@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:kwenu_app/Const/color.dart';
 import 'package:kwenu_app/Const/const.dart';
 import 'package:kwenu_app/View/Dashboard/debit_card_container.dart';
 import 'package:kwenu_app/Widgets/app_bar.dart';
 import 'package:kwenu_app/Widgets/custom_buton.dart';
+
+import '../../AppRoutes/routes.dart';
 
 class ConnectCard extends StatefulWidget {
   const ConnectCard({super.key});
@@ -30,7 +34,7 @@ class _ConnectCardState extends State<ConnectCard> {
               ),
               Container(
                 height: 550.h,
-                width: double.infinity,
+                width: 340.w,
                 color: Colors.transparent,
                 child: SingleChildScrollView(
                   child: Column(
@@ -46,9 +50,13 @@ class _ConnectCardState extends State<ConnectCard> {
                 ),
               ),
               SizedBox(
-                height: 30.h,
+                height: 20.h,
               ),
-              Button(colors: primary, button_text: 'Add New Card')
+              InkWell(
+                  onTap: () {
+                    Get.toNamed(AppRoutes.userProfile);
+                  },
+                  child: Button(colors: primary, button_text: 'Add New Card'))
             ],
           ),
         ),
@@ -62,11 +70,11 @@ Widget Card(image) {
     padding: EdgeInsets.symmetric(vertical: 10.h),
     child: Container(
       height: 200.h,
-      width: double.infinity,
+      width: 320.w,
       child: DebitCard(
-          expDate: 'expDate',
-          Balance: 'Balance',
-          cardNumber: 'cardNumber',
+          expDate: "09/25",
+          Balance: "₦‎5,750.20",
+          cardNumber: "5282 **** **** 6372",
           cardImage: image),
     ),
   );
