@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kwenu_app/View/Market%20Place/MarketPlace%20Single%20Product/market_place_single_product.dart';
 
 import '../../../Const/color.dart';
 
@@ -59,14 +60,21 @@ class _ShoesMarketPlaceState extends State<ShoesMarketPlace> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        width: 144.32.w,
-                        height: 144.32.h,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(13.r),
-                          image: DecorationImage(
-                              image: AssetImage(images[index]),
-                              fit: BoxFit.cover),
+                      InkWell(
+                        onTap: (() {
+                          if(index == 0){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => MarketPlaceSingleProduct()));
+                          }
+                        }),
+                        child: Container(
+                          width: 144.32.w,
+                          height: 144.32.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(13.r),
+                            image: DecorationImage(
+                                image: AssetImage(images[index]),
+                                fit: BoxFit.cover),
+                          ),
                         ),
                       ),
                       SizedBox(

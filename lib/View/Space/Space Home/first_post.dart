@@ -18,7 +18,7 @@ class _FirstPostState extends State<FirstPost> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        reusable_row_space(),
+        reusable_row_space(image: 'assets/images/smiling_african_blue.png', name: 'Michael Owen',),
         SizedBox(
           height: 15.h,
         ),

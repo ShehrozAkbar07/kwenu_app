@@ -2,6 +2,8 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:kwenu_app/View/Check%20Your%20Email/check_your_email.dart';
 import 'package:kwenu_app/View/Connect%20Card/connect_card.dart';
 import 'package:kwenu_app/View/Dashboard/dashboard.dart';
+import 'package:kwenu_app/View/Food/Food%20Home/food_home.dart';
+import 'package:kwenu_app/View/Market%20Place/Market%20Place%20Home/bottom_nav.dart';
 import 'package:kwenu_app/View/Market%20Place/MarketPlace%20Single%20Product/market_place_single_product.dart';
 import 'package:kwenu_app/View/One%20last%20Step/one_last_step.dart';
 import 'package:kwenu_app/View/SignUp/sign_up.dart';
@@ -33,6 +35,8 @@ class AppRoutes {
   static const String marketplace_home = "/marketplace_home";
   static const String marketplace_single_product = "/marketplace_single_product";
   static const String space_home = "/space_home";
+   static const String food_home = "/food_home";
+      static const String bottom_navi = "/bottom_navi";
   
 
   
@@ -51,5 +55,7 @@ class AppRoutes {
      GetPage(name: marketplace_home, page: () => const MarketPlaceHome()),
       GetPage(name: marketplace_single_product, page: () => const MarketPlaceSingleProduct()),
        GetPage(name: space_home, page: () => const SpaceHome()),
+         GetPage(name: food_home, page: () => const FoodHome()),
+          GetPage(name: bottom_navi, page: () => const BottomNav()),
   ];
 }

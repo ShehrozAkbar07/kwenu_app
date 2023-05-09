@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../Const/color.dart';
 import '../../Const/const.dart';
@@ -22,7 +23,7 @@ class _CustomAppBarMarketPlaceState extends State<CustomAppBarMarketPlace> {
     return Container(
       height: 165.h,
       decoration: BoxDecoration(
-          color: red,
+          // color: red,
           image: DecorationImage(
               image: AssetImage('assets/images/Frame_appbar.png'),
               fit: BoxFit.cover)),
@@ -38,18 +39,23 @@ class _CustomAppBarMarketPlaceState extends State<CustomAppBarMarketPlace> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 41.h,
-                      width: 41.w,
-                      decoration: const BoxDecoration(
-                          color: cardtext, shape: BoxShape.circle),
-                      child: Center(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 4.w),
-                          child: Icon(
-                            Icons.arrow_back_ios,
-                            color: whiteColor,
-                            size: 15,
+                    InkWell(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        height: 41.h,
+                        width: 41.w,
+                        decoration: const BoxDecoration(
+                            color: cardtext, shape: BoxShape.circle),
+                        child: Center(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 4.w),
+                            child: Icon(
+                              Icons.arrow_back_ios,
+                              color: whiteColor,
+                              size: 15,
+                            ),
                           ),
                         ),
                       ),

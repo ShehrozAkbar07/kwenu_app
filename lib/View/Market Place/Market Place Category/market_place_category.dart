@@ -4,6 +4,7 @@ import 'package:kwenu_app/Const/color.dart';
 import 'package:kwenu_app/Const/const.dart';
 import 'package:kwenu_app/View/Market%20Place/Market%20Place%20Category/men_trousers_market_place.dart';
 import 'package:kwenu_app/View/Market%20Place/Market%20Place%20Category/shoes_market_place.dart';
+import 'package:kwenu_app/View/Market%20Place/Market%20Place%20SubCategory/market_place_subcategory.dart';
 import 'package:kwenu_app/View/Market%20Place/custom_app_bar_market_place.dart';
 
 class MarketPlaceCategory extends StatefulWidget {
@@ -112,20 +113,27 @@ class _MarketPlaceCategoryState extends State<MarketPlaceCategory> {
                       children: List.generate(4, (index) {
                         return Column(
                           children: [
-                            CircleAvatar(
-                                backgroundColor: lightgrey,
-                                maxRadius: 36.5.r,
-                                child: Container(
-                                  width: 39.w,
-                                  height: 39.h,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                          products_images[index],
-                                        ),
-                                        fit: BoxFit.fill),
-                                  ),
-                                )),
+                            InkWell(
+                              onTap: (() {
+                                if(index == 0) {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> MarketPlaceSubcategory()));
+                                }
+                              }),
+                              child: CircleAvatar(
+                                  backgroundColor: lightgrey,
+                                  maxRadius: 36.5.r,
+                                  child: Container(
+                                    width: 39.w,
+                                    height: 39.h,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                            products_images[index],
+                                          ),
+                                          fit: BoxFit.fill),
+                                    ),
+                                  )),
+                            ),
                             SizedBox(
                               height: 5.75.h,
                             ),

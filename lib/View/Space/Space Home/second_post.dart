@@ -18,7 +18,7 @@ class _SecondPostState extends State<SecondPost> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        reusable_row_space(),
+        reusable_row_space(image: 'assets/images/smiling_african_glasses.png', name: 'Josiah Ikechukwu',),
         SizedBox(height: 15.h),
         Text(
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa ',

@@ -13,3 +13,16 @@ const Color pink = Color(0xffAD717A);
 const Color orange = Color(0xffFF6551);
 const Color lightgrey = Color(0xffE3E5E5);
 const Color lightgrey2 = Color(0xff979C9E);
+const Color yellow   =  Color(0xffFFC42E);
+//Colors use in Space Room
+
+const Color darkblue = Color(0xff265DDE);
+const Color lightred = Color(0xffFF6551);
+const Color darkred = Color(0xffDB5443);
+const Color lightgreen = Color(0xff0DBF66);
+const Color darkgreen = Color(0xff0FA55A);
+
+
+
+
+

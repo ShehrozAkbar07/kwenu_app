@@ -8,6 +8,8 @@ import 'package:kwenu_app/View/Space/Space%20Home/like_comment_share.dart';
 import 'package:kwenu_app/View/Space/Space%20Home/reusable_row_name.dart';
 import 'package:kwenu_app/View/Space/Space%20Home/second_post.dart';
 import 'package:kwenu_app/View/Space/Space%20Home/third_post.dart';
+import 'package:kwenu_app/View/Space/Space%20Room/space_room.dart';
+import 'package:kwenu_app/View/Space/Space%20Stream/space_stream.dart';
 import 'package:kwenu_app/View/Space/space_tabbar.dart';
 import 'package:kwenu_app/Widgets/app_bar.dart';
 
@@ -22,6 +24,17 @@ class SpaceHome extends StatefulWidget {
 }
 
 class _SpaceHomeState extends State<SpaceHome> {
+
+   List<String> smiling_africans = [
+    'assets/images/camera_icon.png',
+    'assets/images/smiling_african_glasses.png',
+    'assets/images/smiling_african.png',
+    'assets/images/smiling_african_coat.png',
+    'assets/images/smiling_african_grey.png',
+    'assets/images/smiling_african_woman.png',
+    'assets/images/mike.png', 
+  ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -78,90 +91,79 @@ class _SpaceHomeState extends State<SpaceHome> {
               ],
             ),
           ),
-          bottomNavigationBar: BottomNav(),
-          body: SingleChildScrollView(
-            child: Container(
-              color: Color.fromARGB(255, 197, 229, 255),
-              height: 1500.h,
-              child: TabBarView(
-                children: <Widget>[
-                  Column(
-                    // mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 100.h,
-                        child: ListView.separated(
-                            padding: EdgeInsets.only(left: 20.w),
-                            // padding: EdgeInsets.only(bottom: 48.h,left:padding,right: padding),
-                            separatorBuilder: ((context, index) => SizedBox(
-                                  width: 8.w,
-                                )),
-                            itemCount: 7,
-                            shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
-                            itemBuilder: (context, index) {
-                              return Row(
-                                children: [
-                                  Container(
-                                    width: 50.w,
-                                    height: 59.h,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: const Color(0xff7c94b6),
-                                      image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/images/smiling_african.png'),
-                                        fit: BoxFit.cover,
-                                      ),
-                                      border: Border.all(
-                                        color: primary,
-                                        width: 1.5.w,
-                                      ),
+          // bottomNavigationBar: BottomNav(),
+          body: TabBarView(
+            children: <Widget>[
+              SingleChildScrollView(
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 100.h,
+                      child: ListView.separated(
+                          padding: EdgeInsets.only(left: 20.w),
+                          // padding: EdgeInsets.only(bottom: 48.h,left:padding,right: padding),
+                          separatorBuilder: ((context, index) => SizedBox(
+                                width: 8.w,
+                              )),
+                          itemCount: 7,
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return Row(
+                              children: [
+                                Container(
+                                  width: 50.w,
+                                  height: 59.h,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.transparent,
+                                    image: DecorationImage(
+                                     image: AssetImage(smiling_africans[index]),
+                                      // fit: BoxFit.cover,
+                                    ),
+                                    border: Border.all(
+                                      color: primary,
+                                      width: 1.5.w,
                                     ),
                                   ),
-                                ],
-                              );
-                            }),
-                      ),
-                      Padding(
-                          padding: EdgeInsets.symmetric(horizontal: padding),
-                          child: FirstPost()),
-                      SizedBox(height: 1.h),
-                      Divider(
-                        thickness: 1,
-                      ),
-                      SizedBox(height: 8.h),
-                      Padding(
-                          padding: EdgeInsets.symmetric(horizontal: padding),
-                          child: SecondPost()),
-                      SizedBox(height: 1.h),
-                      Divider(
-                        thickness: 1,
-                      ),
-                      SizedBox(height: 8.h),
-                      Padding(
-                          padding: EdgeInsets.symmetric(horizontal: padding),
-                          child: ThirdPost()),
-                      SizedBox(height: 1.h),
-                      Divider(
-                        thickness: 1,
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Text('wajih'),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Text('yoo'),
-                    ],
-                  ),
-                ],
+                                ),
+                              ],
+                            );
+                          }),
+                    ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(horizontal: padding),
+                        child: FirstPost()),
+                    SizedBox(height: 1.h),
+                    Divider(
+                      thickness: 1,
+                    ),
+                    SizedBox(height: 8.h),
+                    Padding(
+                        padding: EdgeInsets.symmetric(horizontal: padding),
+                        child: SecondPost()),
+                    SizedBox(height: 1.h),
+                    Divider(
+                      thickness: 1,
+                    ),
+                    SizedBox(height: 8.h),
+                    Padding(
+                        padding: EdgeInsets.symmetric(horizontal: padding),
+                        child: ThirdPost()),
+                    SizedBox(height: 10.h),
+                    Divider(
+                      thickness: 1,
+                    ),
+                  ],
+                ),
               ),
-            ),
+              //second Tabbar ( Live Stream )
+              SpaceStream(),
+              //third Tabbar ( Room )
+              SpaceRoom(),
+            ],
           )),
     );
   }

@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class reusable_row_space extends StatelessWidget {
-  const reusable_row_space({Key? key}) : super(key: key);
+  final String image;
+  final String name;
+
+
+  const reusable_row_space({Key? key, required this.image, required this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +17,7 @@ class reusable_row_space extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 20.r,
-              backgroundImage: AssetImage('assets/images/smiling_african.png'),
+              backgroundImage: AssetImage(image),
             ),
             SizedBox(
               width: 8.w,
@@ -21,7 +25,7 @@ class reusable_row_space extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Michael Owen',style: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w500),),
+                Text(name,style: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w500),),
                 Text('Apr 09, 2021 12:22 ',style: TextStyle(fontSize: 11.sp,fontWeight: FontWeight.w400),),
               ],
             ),

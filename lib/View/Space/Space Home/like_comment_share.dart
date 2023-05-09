@@ -19,6 +19,7 @@ class like_comment_share extends StatefulWidget {
 }
 
 class _like_comment_shareState extends State<like_comment_share> {
+    bool onclick = true;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -27,10 +28,14 @@ class _like_comment_shareState extends State<like_comment_share> {
         Container(
           child: Row(
             children: [
-              Icon(
-                Icons.favorite_outline_rounded,
-                color: primary,
-              ),
+              InkWell(
+                  onTap: () {
+                    onclick = !onclick;
+                    setState(() {
+                      
+                    });
+                  },
+                  child: onclick ? Icon(Icons.favorite_outline_outlined ,color: primary,) : Icon(Icons.favorite,color: primary,)),
               SizedBox(
                 width: 6.w,
               ),
@@ -51,12 +56,13 @@ class _like_comment_shareState extends State<like_comment_share> {
         ),
         Row(
           children: [
-            // ImageIcon(AssetImage('assets/images/share_icon.png')),
-            Icon(CupertinoIcons.share),
+            ImageIcon(
+              AssetImage('assets/images/share_icon.png'),
+              size: 20,
+            ),
             SizedBox(
               width: 6.w,
             ),
-           
             Text('Share'),
           ],
         ),

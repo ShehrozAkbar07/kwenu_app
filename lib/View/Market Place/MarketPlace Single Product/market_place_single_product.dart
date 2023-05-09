@@ -50,19 +50,25 @@ class _MarketPlaceSingleProductState extends State<MarketPlaceSingleProduct> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
-                        height: 62.h,
-                        width: 62.w,
-                        decoration: const BoxDecoration(
-                            color: whiteColor, shape: BoxShape.circle),
-                        child: Center(
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 5.w),
-                            child: Icon(
-                              Icons.arrow_back_ios,
-                              color: black,
-                              size: 25,
-                            )
+                      InkWell(
+                        onTap: (() {
+                          Navigator.pop(context);
+                        }),
+                        
+                        child: Container(
+                          height: 62.h,
+                          width: 62.w,
+                          decoration: const BoxDecoration(
+                              color: whiteColor, shape: BoxShape.circle),
+                          child: Center(
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 5.w),
+                              child: Icon(
+                                Icons.arrow_back_ios,
+                                color: black,
+                                size: 25,
+                              )
+                            ),
                           ),
                         ),
                       ),

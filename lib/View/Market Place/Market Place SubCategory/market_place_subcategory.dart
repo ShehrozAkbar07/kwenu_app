@@ -6,6 +6,8 @@ import 'package:kwenu_app/Const/const.dart';
 import 'package:kwenu_app/View/Market%20Place/custom_app_bar_market_place.dart';
 import 'package:kwenu_app/Widgets/custom_text_field.dart';
 
+import '../MarketPlace Single Product/market_place_single_product.dart';
+
 class MarketPlaceSubcategory extends StatefulWidget {
   const MarketPlaceSubcategory({Key? key}) : super(key: key);
 
@@ -59,15 +61,22 @@ class _MarketPlaceSubcategoryState extends State<MarketPlaceSubcategory> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            width: 159.53.w,
-                            height: 159.53.h,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(13.r),
-                              image: DecorationImage(
-                                  image: AssetImage(images[index]),
-                                  fit: BoxFit.cover),
-                              // color: Colors.red,
+                          InkWell(
+                            onTap: (() {
+                              if(index == 0 ){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => MarketPlaceSingleProduct()));
+                              }
+                            }),
+                            child: Container(
+                              width: 159.53.w,
+                              height: 159.53.h,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(13.r),
+                                image: DecorationImage(
+                                    image: AssetImage(images[index]),
+                                    fit: BoxFit.cover),
+                                // color: Colors.red,
+                              ),
                             ),
                           ),
                           SizedBox(

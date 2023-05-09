@@ -13,12 +13,13 @@ class ThirdPost extends StatefulWidget {
 }
 
 class _ThirdPostState extends State<ThirdPost> {
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-       reusable_row_space(),
+       reusable_row_space(image: 'assets/images/smiling_african_blue.png', name: 'Mike Owen',),
         SizedBox(
           height: 15.h,
         ),
@@ -41,7 +42,7 @@ class _ThirdPostState extends State<ThirdPost> {
               color: red,
               borderRadius: BorderRadius.circular(10.r),
               image: DecorationImage(
-                  image: AssetImage('assets/images/cloud_with_men.png'),
+                  image: AssetImage('assets/images/cheers.png'),
                   fit: BoxFit.cover)),
         ),
         SizedBox(height: 15.h),
