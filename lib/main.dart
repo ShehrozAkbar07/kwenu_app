@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'AppRoutes/routes.dart';
 import 'Const/color.dart';
 import 'Const/const.dart';
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
             smartManagement: SmartManagement.full,
             debugShowCheckedModeBanner: false,
             getPages: AppRoutes.appRoutes,
-            initialRoute: AppRoutes.splash,
+            initialRoute: AppRoutes.onboardscreen,
             theme: ThemeData(
               colorScheme: ColorScheme.fromSwatch()
                   .copyWith(primary: primary, onPrimary: whiteColor),
