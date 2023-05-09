@@ -2,10 +2,12 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:kwenu_app/View/Check%20Your%20Email/check_your_email.dart';
 import 'package:kwenu_app/View/Connect%20Card/connect_card.dart';
 import 'package:kwenu_app/View/Dashboard/dashboard.dart';
+import 'package:kwenu_app/View/Food/Food%20Details/food_details.dart';
 import 'package:kwenu_app/View/Food/Food%20Home/food_home.dart';
 import 'package:kwenu_app/View/Market%20Place/Market%20Place%20Home/bottom_nav.dart';
 import 'package:kwenu_app/View/Market%20Place/MarketPlace%20Single%20Product/market_place_single_product.dart';
 import 'package:kwenu_app/View/One%20last%20Step/one_last_step.dart';
+import 'package:kwenu_app/View/Ride/Ride%20Home/ride_home.dart';
 import 'package:kwenu_app/View/SignUp/sign_up.dart';
 import 'package:kwenu_app/View/Market%20Place/Market%20Place%20Category/market_place_category.dart';
 import 'package:kwenu_app/View/Market%20Place/Market%20Place%20Home/market_place_home.dart';
@@ -36,7 +38,9 @@ class AppRoutes {
   static const String marketplace_single_product = "/marketplace_single_product";
   static const String space_home = "/space_home";
    static const String food_home = "/food_home";
-      static const String bottom_navi = "/bottom_navi";
+  static const String bottom_navi = "/bottom_navi";
+  static const String food_details = "/food_details";
+  static const String ride_home = "/ride_home";
   
 
   
@@ -57,5 +61,7 @@ class AppRoutes {
        GetPage(name: space_home, page: () => const SpaceHome()),
          GetPage(name: food_home, page: () => const FoodHome()),
           GetPage(name: bottom_navi, page: () => const BottomNav()),
+          GetPage(name: food_details, page: () => const FoodDetails()),
+          GetPage(name: ride_home, page: () => const RideHome()),
   ];
 }

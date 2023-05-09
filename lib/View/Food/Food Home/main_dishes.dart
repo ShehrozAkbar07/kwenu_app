@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kwenu_app/View/Food/Food%20Details/food_details.dart';
 
 class MainDishes extends StatefulWidget {
   const MainDishes({Key? key}) : super(key: key);
@@ -9,6 +10,15 @@ class MainDishes extends StatefulWidget {
 }
 
 class _MainDishesState extends State<MainDishes> {
+  List<String> main_dishes_item = [
+    'assets/images/spaghetti.png',
+        'assets/images/pancakes.png',
+        'assets/images/spaghetti_2.png',
+        'assets/images/steak.png',
+        'assets/images/chicken_with_broccoli.png',
+        'assets/images/sandwich.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,12 +34,19 @@ class _MainDishesState extends State<MainDishes> {
         ),
         itemCount: 6,
         itemBuilder: (context, index) {
-          return Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/images/steak.png'),
-                    fit: BoxFit.cover),
-                borderRadius: BorderRadius.circular(18.r)),
+          return InkWell(
+            onTap: (){
+              if(index == 0){
+                Navigator.push(context, MaterialPageRoute(builder: ((context) => FoodDetails())));
+              }
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(main_dishes_item[index]),
+                      fit: BoxFit.cover),
+                  borderRadius: BorderRadius.circular(18.r)),
+            ),
           );
         },
       ),

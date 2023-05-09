@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kwenu_app/Const/color.dart';
 import 'package:kwenu_app/Const/const.dart';
 import 'package:kwenu_app/View/Market%20Place/Market%20Place%20Category/men_trousers_market_place.dart';
+import 'package:kwenu_app/View/Market%20Place/Market%20Place%20Category/shirt_items.dart';
 import 'package:kwenu_app/View/Market%20Place/Market%20Place%20Category/shoes_market_place.dart';
 import 'package:kwenu_app/View/Market%20Place/Market%20Place%20SubCategory/market_place_subcategory.dart';
 import 'package:kwenu_app/View/Market%20Place/custom_app_bar_market_place.dart';
@@ -29,32 +30,7 @@ class _MarketPlaceCategoryState extends State<MarketPlaceCategory> {
     'T-Shirt',
   ];
 
-  List<String> images = [
-    'assets/images/18 1.png',
-    'assets/images/15 8.png',
-    'assets/images/13 1.png',
-    'assets/images/110 1.png',
-    'assets/images/15 8.png',
-    'assets/images/18 1.png',
-  ];
-
-  List<String> text = [
-    '2021 Men Casual Classic ...',
-    'Latest Men runners boot ',
-    '2021 Men Casual Classic ...',
-    '2021 Men Casual Classic ...',
-    'Latest Men runners boot ',
-    '2021 Men Casual Classic ...',
-  ];
-
-  List<String> shoe_price = [
-    '₦8,000',
-    '₦24,000',
-    '₦32,000',
-    '₦7999',
-    '₦24,000',
-    '₦8,000',
-  ];
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -180,8 +156,30 @@ class _MarketPlaceCategoryState extends State<MarketPlaceCategory> {
                           SizedBox(
                             height: 27.28.h,
                           ),
+                          MenTrousersMarketPlace(),
                           
-                          MenTrousersMarketPlace()
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Container(
+                      height: 280.h,
+                      color: whiteColor,
+                      child: Column(  
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: padding),
+                            child: reusablerow(reusablerow_text: 'Shirt')
+                          ),
+                          SizedBox(
+                            height: 27.28.h,
+                          ),
+                          ShirtItems(),
+                          
                         ],
                       ),
                     ),

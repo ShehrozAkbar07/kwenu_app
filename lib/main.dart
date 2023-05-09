@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             smartManagement: SmartManagement.full,
             debugShowCheckedModeBanner: false,
             getPages: AppRoutes.appRoutes,
-            initialRoute: AppRoutes.bottom_navi,
+            initialRoute: AppRoutes.market_place_category,
             theme: ThemeData(
               colorScheme: ColorScheme.fromSwatch()
                   .copyWith(primary: primary, onPrimary: whiteColor),

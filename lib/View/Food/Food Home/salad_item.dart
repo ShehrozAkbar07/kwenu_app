@@ -9,6 +9,13 @@ class Salad_item extends StatefulWidget {
 }
 
 class _SaladState extends State<Salad_item> {
+
+    List<String> salad_items = [
+    'assets/images/salad_1.png',
+        'assets/images/salad_2.png',
+        'assets/images/salad_3.png',
+
+  ];
    @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +34,7 @@ class _SaladState extends State<Salad_item> {
           return Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/steak.png'),
+                    image: AssetImage(salad_items[index]),
                     fit: BoxFit.cover),
                 borderRadius: BorderRadius.circular(18.r)),
           );

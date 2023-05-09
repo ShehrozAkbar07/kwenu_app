@@ -28,7 +28,10 @@ class _FoodHomeState extends State<FoodHome> {
                 Container(
                   height: 245.h,
                   width: double.infinity,
-                  color: red,
+                  // color: red,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage('assets/images/red_bg.png'),fit: BoxFit.cover)
+                  ),
                   child: Padding(
                     padding:  EdgeInsets.symmetric(horizontal: 30.w),
                     child: Column(
@@ -58,7 +61,6 @@ class _FoodHomeState extends State<FoodHome> {
                               children: [
                                 Icon(Icons.search,color: whiteColor,size: 30,),
                                 SizedBox(width: 8.17.w,),
-                          
                                   ImageIcon(AssetImage('assets/images/add_to_cart_icon.png'),color: whiteColor,size: 20,)
                               ],
                             ),
@@ -92,7 +94,28 @@ class _FoodHomeState extends State<FoodHome> {
                    bottom: 2.h,
                    child: Image(image: AssetImage('assets/images/burger_with_pepsi.png',),
                           height: 162.h, width: 175.w,),
-                 )
+                 ),
+                  Positioned(
+              right: 20.w,
+              top: 30.h,
+              child: Container(
+                height: 20.h,
+                width: 20.h,
+                child: Center(
+                    child: Text(
+                  '3',
+                  style: TextStyle(fontSize: 10.sp, color: whiteColor),
+                )),
+                decoration: new BoxDecoration(
+                  color: primary,
+                  shape: BoxShape.circle,
+                  border: new Border.all(
+                    color: whiteColor,
+                    width: 2.0,
+                  ),
+                ),
+              ),
+            ),
               ],
             ),
             SizedBox(height: 32.h,),

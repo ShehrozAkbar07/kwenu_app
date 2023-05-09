@@ -1,38 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kwenu_app/View/Market%20Place/MarketPlace%20Single%20Product/market_place_single_product.dart';
 
 import '../../../Const/color.dart';
 
-class ShoesMarketPlace extends StatefulWidget {
-  const ShoesMarketPlace({Key? key}) : super(key: key);
+class ShirtItems extends StatefulWidget {
+  const ShirtItems({ Key? key }) : super(key: key);
 
   @override
-  _ShoesMarketPlaceState createState() => _ShoesMarketPlaceState();
+  _ShirtItemsState createState() => _ShirtItemsState();
 }
 
-class _ShoesMarketPlaceState extends State<ShoesMarketPlace> {
+class _ShirtItemsState extends State<ShirtItems> {
   
   List<String> images = [
-    'assets/images/18 1.png',
-    'assets/images/15 8.png',
-    'assets/images/13 1.png',
-    'assets/images/110 1.png',
-    'assets/images/15 8.png',
-    'assets/images/18 1.png',
+    'assets/images/shirt_1.png',
+    'assets/images/shirt_2.png',
+    'assets/images/shirt_3.png',
+    'assets/images/shirt_4.png',
   ];
 
   List<String> text = [
-    '2021 Men Casual Classic ...',
-    'Latest Men runners boot ',
-    '2021 Men Casual Classic ...',
-    '2021 Men Casual Classic ...',
-  
+    'Men\'s Solid Smiling Face',
+    'Men\'s Solid Smiling Face',
+    'Men\'s Solid Smiling Face',
+    'Men\'s Solid Smiling Face',
   ];
 
-  List<String> shoe_price = [
-    '₦7999',
-    '₦24,000',
+  List<String> shirt_price = [
+    '₦8200',
+    '₦24000',
     '₦7999',
     '₦7999',
   ];
@@ -49,7 +45,7 @@ class _ShoesMarketPlaceState extends State<ShoesMarketPlace> {
           physics: BouncingScrollPhysics(),
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
-          itemCount: shoe_price.length,
+          itemCount: 4,
           itemBuilder: (context, index) {
             return Row(
               children: [
@@ -57,21 +53,14 @@ class _ShoesMarketPlaceState extends State<ShoesMarketPlace> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      InkWell(
-                        onTap: (() {
-                          if(index == 0){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => MarketPlaceSingleProduct()));
-                          }
-                        }),
-                        child: Container(
-                          width: 144.32.w,
-                          height: 144.32.h,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(13.r),
-                            image: DecorationImage(
-                                image: AssetImage(images[index]),
-                                fit: BoxFit.cover),
-                          ),
+                      Container(
+                        width: 144.32.w,
+                        height: 144.32.h,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(13.r),
+                          image: DecorationImage(
+                              image: AssetImage(images[index]),
+                              fit: BoxFit.cover),
                         ),
                       ),
                       SizedBox(
@@ -88,7 +77,7 @@ class _ShoesMarketPlaceState extends State<ShoesMarketPlace> {
                         height: 3.65.h,
                       ),
                       Text(
-                        shoe_price[index],
+                        shirt_price[index],
                         style: TextStyle(
                             fontSize: 16.4959.sp, fontWeight: FontWeight.w600),
                       ),

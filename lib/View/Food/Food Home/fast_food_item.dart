@@ -9,6 +9,15 @@ class FastFood_item extends StatefulWidget {
 }
 
 class _FastFoodState extends State<FastFood_item> {
+
+    List<String> fast_food_items = [
+    'assets/images/icecream.png',
+        'assets/images/burger.png',
+        'assets/images/pizza.png',
+        'assets/images/fries.png',
+        'assets/images/hotdog.png',
+        'assets/images/cookies.png',
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +36,7 @@ class _FastFoodState extends State<FastFood_item> {
           return Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/steak.png'),
+                    image: AssetImage(fast_food_items[index]),
                     fit: BoxFit.cover),
                 borderRadius: BorderRadius.circular(18.r)),
           );

@@ -12,30 +12,21 @@ class MenTrousersMarketPlace extends StatefulWidget {
 
 class _MenTrousersMarketPlaceState extends State<MenTrousersMarketPlace> {
    List<String> images = [
-    'assets/images/18 1.png',
-    'assets/images/15 8.png',
-    'assets/images/13 1.png',
-    'assets/images/110 1.png',
-    'assets/images/15 8.png',
-    'assets/images/18 1.png',
+    'assets/images/trouser_1.png',
+    'assets/images/trouser_2.png',
+    'assets/images/trouser_3.png',
   ];
 
   List<String> text = [
-    '2021 Men Casual Classic ...',
-    'Latest Men runners boot ',
-    '2021 Men Casual Classic ...',
-    '2021 Men Casual Classic ...',
-    'Latest Men runners boot ',
-    '2021 Men Casual Classic ...',
+    'FDYJE Mens Trousers ....',
+    'FDYJE Mens Trousers ....',
+    'FDYJE Mens Trousers ....',
   ];
 
   List<String> shoe_price = [
     '₦8,000',
-    '₦24,000',
-    '₦32,000',
     '₦7999',
-    '₦24,000',
-    '₦8,000',
+    '₦24000',
   ];
   @override
   Widget build(BuildContext context) {
@@ -50,7 +41,7 @@ class _MenTrousersMarketPlaceState extends State<MenTrousersMarketPlace> {
           physics: BouncingScrollPhysics(),
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
-          itemCount: 4,
+          itemCount: text.length,
           itemBuilder: (context, index) {
             return Row(
               children: [
